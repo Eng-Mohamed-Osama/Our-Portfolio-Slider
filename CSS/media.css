@@ -1,0 +1,15 @@
+@media (max-width : 1200px){
+    #Portfolio  .portfolio-divs{
+        flex: 0 0 33.33%;
+    }
+}
+@media (max-width : 900px){
+    #Portfolio  .portfolio-divs{
+        flex: 0 0 50%;
+    }
+}
+@media (max-width : 768px){
+    #Portfolio  .portfolio-divs{
+        flex: 0 0 100%;
+    }
+}

@@ -1,0 +1,259 @@
+/* ************* Global Style************* */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    width: 75%;
+    margin: 0 auto;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+}
+/* ************* Main Style************* */
+#Portfolio{
+    background-color: #ffffff;
+    padding: 100px 0;
+}
+#Portfolio .portfolio-holder h2 {
+    font-size: 45px;
+    font-weight: 900;
+    position: relative;
+}
+#Portfolio .portfolio-holder h2::before {
+    content: '';
+    position: absolute;
+    background-image: url(../imgs/title.png);
+    top: 0;
+    left: 36%;
+    /* z-index: 0; */
+    height: 50px;
+    background-position: center;
+    background-size: 100%;
+    opacity: .3;
+    width: 16%;
+}
+#Portfolio .portfolio-holder p{
+    margin: 20px 0 10px 0;
+    font-size: 17px;
+    color: #8e7a7a;
+}
+#Portfolio  .portfolio-divs{
+    flex: 0 0 33.33%;
+    overflow: hidden;
+    position: relative;
+    transition: display .2s ease;
+}
+#Portfolio  .portfolio-holder{
+    text-align: center;
+}
+#Portfolio  .portfolio-holder ul{
+    text-align: center;
+    list-style: none;
+    margin: 50px auto;
+}
+#Portfolio  .portfolio-holder ul li{
+    display: inline-block;
+    text-decoration: none;
+    padding: 10px 20px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+}
+#Portfolio  .portfolio-holder ul li a{
+    text-decoration: none;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 5px 10px;
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    color: #000000;
+}
+.active{
+    background-color:#e71329;
+}
+/* ************* style for the img-holder layer************* */
+#Portfolio  .portfolio-divs .img-holder {
+    width: 100%;
+    overflow: hidden;
+}
+#Portfolio  .portfolio-divs .img-holder img{
+    width: 100%;
+    height: 100%;
+    display: block;
+    transform: scale(1);
+    transition:all .3s ease;
+}
+#Portfolio  .portfolio-divs:hover{
+    cursor: crosshair; 
+}
+#Portfolio  .portfolio-divs:hover img{
+    transform: scale(1.1);
+    filter: blur(5px);
+}
+/* ************* style for the overlay layer*************  */
+#Portfolio  .portfolio-divs .overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    color: #ffffff;
+    text-align: center;
+}
+#Portfolio  .portfolio-divs .overlay ul{
+    list-style: none;
+    position: absolute;
+    top: 50%;
+    display: block;
+    width: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+}
+#Portfolio  .portfolio-divs .overlay ul li {
+    display: inline-block;
+    padding: 10px;
+    background-color: #e71329;
+    margin-right: 5px;
+    top: 40%;
+    transform: translateY(40px);
+    transition:all .5s ease;
+}
+#Portfolio  .portfolio-divs .overlay:hover li{
+    transform: translateY(0);
+}
+#Portfolio  .portfolio-divs .overlay h3{
+    font-size: 25px;
+    position: absolute;
+    display: block;
+    width: 100%;
+    top: 39%;
+    opacity: 0;
+    transform: translateY(20px);
+    transition:all .5s ease;
+}
+#Portfolio  .portfolio-divs .overlay:hover h3{
+    transform: translateY(0);
+    opacity: 1;
+}
+/* ************* style for the border effect*************  */
+#Portfolio  .portfolio-divs .border-helper::before{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 0;
+    left: 20px;
+    width: 2px;
+    top:50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs .border-helper::after{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 0;
+    right: 20px;
+    width: 2px;
+    bottom: 50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs .img-holder::before{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 0;
+    left: 20px;
+    width: 2px;
+    bottom: 50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs .img-holder::after{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 0;
+    right: 20px;
+    left: auto;
+    width: 2px;
+    top: 50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs::before{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 2px;
+    top: 20px;
+    width: 0;
+    left: 50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs::after{
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 2px;
+    top: 20px;
+    width: 0;
+    left: auto;
+    right: 50%;
+    z-index: 9999;
+    transition: .4s;
+    
+}
+#Portfolio  .portfolio-divs .overlay::after {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 2px;
+    bottom: 20px;
+    width: 0;
+    left: 50%;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs .overlay::before {
+    content: '';
+    background-color: #ffffff;
+    position: absolute;
+    height: 2px;
+    bottom: 20px;
+    width: 0;
+    right: 50%;
+    left: auto;
+    z-index: 9999;
+    transition: .4s;
+}
+#Portfolio  .portfolio-divs:hover::before{
+    width: 50%;
+}
+#Portfolio  .portfolio-divs:hover::after{
+    width: 50%;
+}
+#Portfolio  .portfolio-divs .overlay:hover::before{
+    width: 50%;
+}
+#Portfolio  .portfolio-divs .overlay:hover::after{
+    width: 50%;
+}
+#Portfolio  .portfolio-divs:hover .img-holder::before{
+    height: 50%;
+}
+#Portfolio  .portfolio-divs:hover .img-holder::after{
+    height: 50%;
+}
+#Portfolio  .portfolio-divs:hover .border-helper::before{
+    height: 50%;
+}
+#Portfolio  .portfolio-divs:hover .border-helper::after{
+    height: 50%;
+}
